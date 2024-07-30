@@ -11,14 +11,11 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List {
-                Text("Hello")
-                Text("SwiftUI")
+                Cell()
+                Cell()
             }
-            .navigationTitle("Fisrt Screen")
+            .navigationTitle("Friends")
         }
-        
-        
-            //.padding()
     }
 }
 
