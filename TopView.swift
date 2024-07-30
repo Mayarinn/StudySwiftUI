@@ -9,7 +9,11 @@ import SwiftUI
 
 struct TopView: View {
     var body: some View {
-        HStack {
+        HStack(spacing: 12.0) {
+            Image("firstPerson")
+                .resizable()
+                .frame(width: 100, height: 100)
+                .clipShape(Circle())
             VStack(alignment: .leading, spacing: 6.0) {
                 Text("John Doe")
                     .font(.title2)
@@ -17,7 +21,7 @@ struct TopView: View {
                     Text("johndoe@mail.com")
                     Image("like")
                         .resizable()
-                        .frame(width: 18, height: 18, alignment: .center)
+                        .frame(width: 18, height: 18)
                     Text("12.2K likes")
                 }
             }
