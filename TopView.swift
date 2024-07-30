@@ -19,10 +19,11 @@ struct TopView: View {
                     .font(.title2)
                 HStack {
                     Text("johndoe@mail.com")
+                    Spacer()
                     Image("like")
                         .resizable()
                         .frame(width: 18, height: 18)
-                    Text("12.2K likes")
+                    Text("12.2K likes ")
                 }
             }
         }
