@@ -11,6 +11,10 @@ struct TopView: View {
     var body: some View {
         HStack {
             Text("e-mail")
+            Image("like")
+                .resizable()
+                .frame(width: 18, height: 18, alignment: .center)
+            
             Text("likes")
         }
     }
