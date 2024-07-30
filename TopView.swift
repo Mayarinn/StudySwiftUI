@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TopView: View {
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .leading, spacing: 6.0) {
             Text("John Doe")
                 .font(.title2)
             
