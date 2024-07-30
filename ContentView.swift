@@ -9,10 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        List {
-            Text("Hello")
-            Text("SwiftUI")
+        NavigationView {
+            List {
+                Text("Hello")
+                Text("SwiftUI")
+            }
+            .navigationTitle("Fisrt Screen")
         }
+        
+        
             //.padding()
     }
 }
