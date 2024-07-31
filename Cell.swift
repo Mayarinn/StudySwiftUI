@@ -10,11 +10,11 @@ import SwiftUI
 struct Cell: View {
     var user: UserResponse
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack {
             TopView(user: user)
             Text(user.text)
                 .lineLimit(nil)
-        }.padding()
+        }
     }
 }
 

@@ -10,21 +10,20 @@ import SwiftUI
 struct TopView: View {
     var user: UserResponse
     var body: some View {
-        HStack(spacing: 12.0) {
+        HStack(spacing: 15.0) {
             Image(user.profileImage)
                 .resizable()
                 .frame(width: 100, height: 100)
                 .clipShape(Circle())
             VStack(alignment: .leading, spacing: 6.0) {
                 Text(user.name)
-                    .font(.title2)
+                    .font(.title)
+                Text(user.email)
                 HStack {
-                    Text(user.email)
-                    Spacer()
+                    Text(user.likes+" ")
                     Image("like")
                         .resizable()
                         .frame(width: 18, height: 18)
-                    Text(user.likes+" ")
                 }
             }
         }
