@@ -11,7 +11,7 @@ struct Cell: View {
     var user: UserResponse
     var body: some View {
         VStack(alignment: .leading) {
-            TopView()
+            TopView(user: user)
             Text(user.text)
                 .lineLimit(nil)
         }.padding()
