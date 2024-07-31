@@ -10,9 +10,8 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationView {
-            List {
-                Cell()
-                Cell()
+            List(userResponse) { user in
+                Text(user.name)
             }
             .navigationTitle("Friends")
         }
