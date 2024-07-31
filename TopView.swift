@@ -8,22 +8,23 @@
 import SwiftUI
 
 struct TopView: View {
+    var user: UserResponse
     var body: some View {
         HStack(spacing: 12.0) {
-            Image("firstPerson")
+            Image(user.profileImage)
                 .resizable()
                 .frame(width: 100, height: 100)
                 .clipShape(Circle())
             VStack(alignment: .leading, spacing: 6.0) {
-                Text("John Doe")
+                Text(user.name)
                     .font(.title2)
                 HStack {
-                    Text("johndoe@mail.com")
+                    Text(user.email)
                     Spacer()
                     Image("like")
                         .resizable()
                         .frame(width: 18, height: 18)
-                    Text("12.2K likes ")
+                    Text(user.likes+" ")
                 }
             }
         }
@@ -32,6 +33,6 @@ struct TopView: View {
 
 struct TopView_Previews: PreviewProvider {
     static var previews: some View {
-        TopView()
+        TopView(user: userResponse[2])
     }
 }
