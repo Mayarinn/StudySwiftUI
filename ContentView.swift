@@ -11,7 +11,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List(userResponse) { user in
-                Text(user.name)
+                Cell(user: user)
             }
             .navigationTitle("Friends")
         }
