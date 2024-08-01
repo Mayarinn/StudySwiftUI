@@ -13,7 +13,7 @@ struct ProductRow: View {
     var item: [ProductsResponse]
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading, spacing: 10) {
             Text(categoryName).font(.headline)
             ScrollView(.horizontal) {
                 HStack {
@@ -21,7 +21,7 @@ struct ProductRow: View {
                         Text(item.name)
                     }
                 }
-            }
+            }.frame(height: 190)
         }
     }
 }
