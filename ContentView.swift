@@ -16,7 +16,7 @@ struct ContentView: View {
         NavigationView {
             List {
                 ForEach(categories.keys.sorted(), id:\.self) { key in
-                    ProductRow(categoryName: key, item: categories[key]!)
+                    ProductRow(categoryName: key, items: categories[key]!)
                 }
             }
             .navigationTitle("Friends")
