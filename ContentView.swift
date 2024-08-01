@@ -18,7 +18,9 @@ struct ContentView: View {
                 ForEach(categories.keys.sorted(), id:\.self) { key in
                     ProductRow(categoryName: key, items: categories[key]!)
                 }
+                .listRowInsets(EdgeInsets())
             }
+            
             .navigationTitle("Friends")
         }
     }

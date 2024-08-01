@@ -15,6 +15,8 @@ struct ProductRow: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             Text(categoryName).font(.headline)
+                .padding(.leading, 15)
+                .padding(.top, 5)
             ScrollView(.horizontal) {
                 HStack {
                     ForEach(items) { item in
