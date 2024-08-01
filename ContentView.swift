@@ -7,11 +7,17 @@
 
 import SwiftUI
 
+var categories: [String: [ProductsResponse]] {
+    .init(grouping: materialResponse, by: {$0.category.rawValue})
+}
+
 struct ContentView: View {
     var body: some View {
         NavigationView {
-            List(userResponse) { user in
-                Cell(user: user)
+            List {
+                ForEach(categories.keys.sorted(), id:\.self) { key in
+                    Text(key)
+                }
             }
             .navigationTitle("Friends")
         }
