@@ -20,9 +20,10 @@ struct ContentView: View {
                     ProductRow(categoryName: key, items: categories[key]!)
                 }
                 .listRowInsets(EdgeInsets())
+                NavigationLink("Teachers", destination: FriendsList())
             }
             
-            .navigationTitle("Friends")
+            .navigationTitle("Homepage")
         }
     }
 }
