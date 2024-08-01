@@ -2,8 +2,7 @@
 //  Data.swift
 //  SwiftUIFirstDemo
 //
-//  Created by Алексей Пархоменко on 05.06.2019.
-//  Copyright © 2019 Алексей Пархоменко. All rights reserved.
+//  Created on 05.06.2019
 //
 
 import Foundation
@@ -11,11 +10,10 @@ import Foundation
 import UIKit
 import SwiftUI
 
-
+let swiftbook = UserResponse(id: 10, name: "Swiftbook", profileImage: "swiftbook", email: "info@swift.com", likes: "54.4 K", text: "Learning to create apps in Swift for everyone!\nThe largest and most friendly iOS development community :)")
 
 let userResponse: [UserResponse] = load("userModelData.json")
-
-
+let materialResponse: [ProductsResponse] = load("coursesModelData.json")
 
 func load<T: Decodable>(_ filename: String, as type: T.Type = T.self) -> T {
     let data: Data
