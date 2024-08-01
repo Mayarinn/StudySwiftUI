@@ -9,15 +9,20 @@ import SwiftUI
 
 struct ProductItem: View {
     
-    var object: [ProductsResponse]
+    var object: ProductsResponse
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Image(object.image)
+                .resizable()
+                .cornerRadius(10)
+                .frame(width: 170, height: 170)
+        }.padding(.leading, 15)
     }
 }
 
 struct ProductItem_Previews: PreviewProvider {
     static var previews: some View {
-        ProductItem(object: materialResponse)
+        ProductItem(object: materialResponse[1])
     }
 }
