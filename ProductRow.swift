@@ -13,7 +13,14 @@ struct ProductRow: View {
     var item: [ProductsResponse]
     
     var body: some View {
-        Text(categoryName).font(.headline)
+        VStack {
+            Text(categoryName).font(.headline)
+            HStack {
+                ForEach(item) { item in
+                    Text(item.name)
+                }
+            }
+        }
     }
 }
 
