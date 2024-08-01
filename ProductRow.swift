@@ -15,9 +15,11 @@ struct ProductRow: View {
     var body: some View {
         VStack {
             Text(categoryName).font(.headline)
-            HStack {
-                ForEach(item) { item in
-                    Text(item.name)
+            ScrollView(.horizontal) {
+                HStack {
+                    ForEach(item) { item in
+                        Text(item.name)
+                    }
                 }
             }
         }
