@@ -15,6 +15,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List {
+                Cell(user: swiftbook).listRowInsets(EdgeInsets())
                 ForEach(categories.keys.sorted(), id:\.self) { key in
                     ProductRow(categoryName: key, items: categories[key]!)
                 }
