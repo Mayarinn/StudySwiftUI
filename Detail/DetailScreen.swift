@@ -17,6 +17,14 @@ struct DetailScreen: View {
             Text(object.name)
                 .lineLimit(nil)
                 .font(.title)
+            VStack {
+                Text("\(object.lessons)")
+                    .font(.title)
+                Text("Lessons")
+                    .font(.body)
+                    .fontWeight(.medium)
+                
+            }
         }
     }
     
