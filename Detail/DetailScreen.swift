@@ -20,6 +20,8 @@ struct DetailScreen: View {
             lessonsAndStudents(object: object)
             description(object: object)
                 .padding()
+            Spacer()
+            
         }
     }
     
