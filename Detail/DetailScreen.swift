@@ -25,6 +25,14 @@ struct DetailScreen: View {
                     .fontWeight(.medium)
                 
             }
+            VStack {
+                Text("\(object.students)")
+                    .font(.title)
+                Text("Students")
+                    .font(.body)
+                    .fontWeight(.medium)
+                
+            }
         }
     }
     
