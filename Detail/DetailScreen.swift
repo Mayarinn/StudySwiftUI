@@ -12,8 +12,24 @@ struct DetailScreen: View {
     var object: ProductsResponse
     
     var body: some View {
-        Text(object.name)
+        mainImage(object: object)
     }
+    
+struct mainImage: View {
+        
+    var object: ProductsResponse
+    
+    var body: some View {
+        Image(object.image)
+            .resizable()
+            .frame(width: 170, height: 170)
+            .border(Color.gray, width: 3)
+            .cornerRadius(30)
+            .shadow(radius: 10)
+    }
+        
+}
+    
 }
 
 struct DetailScreen_Previews: PreviewProvider {
