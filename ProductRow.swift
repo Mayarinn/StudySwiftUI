@@ -20,7 +20,7 @@ struct ProductRow: View {
             ScrollView(.horizontal) {
                 HStack {
                     ForEach(items) { item in
-                        NavigationLink(destination: DetailScreen()) {
+                        NavigationLink(destination: DetailScreen(object: item)) {
                             ProductItem(object: item)
                         }
                     }
