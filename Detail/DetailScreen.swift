@@ -48,7 +48,19 @@ struct mainImage: View {
             .cornerRadius(30)
             .shadow(radius: 10)
     }
+}
+    
+struct lessonsAndStudents: View {
         
+    var object: ProductsResponse
+        
+    var body: some View {
+        HStack {
+                
+                
+        }
+    }
+            
 }
     
 }
