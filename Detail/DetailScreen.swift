@@ -12,7 +12,12 @@ struct DetailScreen: View {
     var object: ProductsResponse
     
     var body: some View {
-        mainImage(object: object)
+        VStack(spacing: 20.0) {
+            mainImage(object: object)
+            Text(object.name)
+                .lineLimit(nil)
+                .font(.title)
+        }
     }
     
 struct mainImage: View {
