@@ -13,10 +13,17 @@ struct ProductItem: View {
     
     var body: some View {
         VStack {
-            Image(object.image)
-                .resizable()
-                .cornerRadius(10)
-                .frame(width: 170, height: 170)
+            if object.category == Category.courses {
+                Image(object.image)
+                    .resizable()
+                    .cornerRadius(10)
+                    .frame(width: 170, height: 170)
+            } else {
+                Image(object.image)
+                    .resizable()
+                    .cornerRadius(10)
+                    .frame(width: 170, height: 190)
+            }
         }.padding(.leading, 15)
     }
 }
