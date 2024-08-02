@@ -18,6 +18,8 @@ struct DetailScreen: View {
                 .lineLimit(nil)
                 .font(.title)
             lessonsAndStudents(object: object)
+            description(object: object)
+                .padding()
         }
     }
     
@@ -59,6 +61,20 @@ struct lessonsAndStudents: View {
         }
     }
             
+}
+    
+struct description: View {
+    
+    var object: ProductsResponse
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 10.0) {
+            Text("Description")
+                .font(.title)
+            Text(object.description)
+                .lineLimit(nil)
+        }
+    }
 }
     
 }
