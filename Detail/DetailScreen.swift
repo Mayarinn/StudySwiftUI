@@ -17,22 +17,7 @@ struct DetailScreen: View {
             Text(object.name)
                 .lineLimit(nil)
                 .font(.title)
-            VStack {
-                Text("\(object.lessons)")
-                    .font(.title)
-                Text("Lessons")
-                    .font(.body)
-                    .fontWeight(.medium)
-                
-            }
-            VStack {
-                Text("\(object.students)")
-                    .font(.title)
-                Text("Students")
-                    .font(.body)
-                    .fontWeight(.medium)
-                
-            }
+            lessonsAndStudents(object: object)
         }
     }
     
@@ -55,9 +40,22 @@ struct lessonsAndStudents: View {
     var object: ProductsResponse
         
     var body: some View {
-        HStack {
+        HStack(spacing: 50.0) {
+            VStack {
+                Text("\(object.lessons)")
+                    .font(.title)
+                Text("Lessons")
+                    .font(.body)
+                    .fontWeight(.medium)
                 
-                
+            }
+            VStack {
+                Text("\(object.students)")
+                    .font(.title)
+                Text("Students")
+                    .font(.body)
+                    .fontWeight(.medium)
+            }
         }
     }
             
