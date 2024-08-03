@@ -10,7 +10,7 @@ import SwiftUI
 struct ProductRow: View {
     
     var categoryName: String
-    var items: [ProductsResponse]
+    var objects: [ProductsResponse]
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
@@ -19,7 +19,7 @@ struct ProductRow: View {
                 .padding(.top, 5)
             ScrollView(.horizontal) {
                 HStack {
-                    ForEach(items) { item in
+                    ForEach(objects) { item in
                         NavigationLink(destination: DetailScreen(object: item)) {
                             ProductItem(object: item)
                         }
@@ -32,6 +32,6 @@ struct ProductRow: View {
 
 struct ProductRow_Previews: PreviewProvider {
     static var previews: some View {
-        ProductRow(categoryName: materialResponse[0].category.rawValue, items: Array(materialResponse.prefix(3)))
+        ProductRow(categoryName: materialResponse[0].category.rawValue, objects: Array(materialResponse.prefix(3)))
     }
 }
