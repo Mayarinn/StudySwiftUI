@@ -19,9 +19,9 @@ struct ProductRow: View {
                 .padding(.top, 5)
             ScrollView(.horizontal) {
                 HStack {
-                    ForEach(objects) { item in
-                        NavigationLink(destination: DetailScreen(object: item)) {
-                            ProductItem(object: item)
+                    ForEach(objects) { object in
+                        NavigationLink(destination: DetailScreen(object: object)) {
+                            ProductItem(object: object)
                         }
                     }
                 }
