@@ -17,7 +17,7 @@ struct ContentView: View {
             List {
                 Cell(user: swiftbook).listRowInsets(EdgeInsets())
                 ForEach(categories.keys.sorted(), id:\.self) { key in
-                    ProductRow(categoryName: key, items: categories[key]!)
+                    ProductRow(categoryName: key, objects: categories[key]!)
                 }
                 .listRowInsets(EdgeInsets())
                 NavigationLink("Teachers", destination: FriendsList())
