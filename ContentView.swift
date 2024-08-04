@@ -24,7 +24,7 @@ struct ContentView: View {
             }
             
             .navigationTitle("Homepage")
-        }
+        }.navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

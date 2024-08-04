@@ -13,6 +13,7 @@ struct Cell: View {
         VStack {
             TopView(user: user)
             Text(user.text)
+                .padding()
                 .lineLimit(nil)
         }
     }
