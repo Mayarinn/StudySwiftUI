@@ -30,12 +30,21 @@ struct mainImage: View {
     var object: ProductsResponse
     
     var body: some View {
-        Image(object.image)
-            .resizable()
-            .frame(width: 170, height: 170)
-            .border(Color.gray, width: 3)
-            .cornerRadius(30)
-            .shadow(radius: 10)
+        if (object.category.rawValue == Category.courses.rawValue) {
+            Image(object.image)
+                .resizable()
+                .frame(width: 170, height: 170)
+                .border(Color.gray, width: 3)
+                .cornerRadius(30)
+                .shadow(radius: 10)
+        } else {
+            Image(object.image)
+                .resizable()
+                .frame(width: 170, height: 190)
+                .border(Color.gray, width: 3)
+                .cornerRadius(30)
+                .shadow(radius: 10)
+        }
     }
 }
     

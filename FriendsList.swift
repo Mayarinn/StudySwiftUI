@@ -9,8 +9,13 @@ import SwiftUI
 
 struct FriendsList: View {
     var body: some View {
-        Text("Hello")
-            .navigationTitle("Teachers")
+        List {
+            ForEach(userResponse) { user in
+                Cell(user: user)
+                    .lineLimit(nil)
+            }
+        }
+        .navigationTitle("Teachers")
     }
 }
 
