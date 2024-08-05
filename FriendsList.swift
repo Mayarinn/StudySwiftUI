@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FriendsList: View {
     var body: some View {
-        VStack {
+        List {
             ForEach(userResponse) { user in
                 Cell(user: user)
                     .lineLimit(nil)
