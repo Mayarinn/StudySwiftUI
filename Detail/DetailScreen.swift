@@ -23,6 +23,7 @@ struct DetailScreen: View {
             description(object: object)
                 .padding()
             Spacer()
+            
             Button {
                 isShowingConfirmation = true
             } label: {
@@ -31,6 +32,16 @@ struct DetailScreen: View {
             .buttonStyle(.bordered)
             .tint(.red)
             .controlSize(.regular)
+            
+            .confirmationDialog("Delete from \(object.category.rawValue)",
+                                isPresented: $isShowingConfirmation,
+                                titleVisibility: .visible,
+                                actions: {
+                Button(role: .destructive, action: {print("Item deleted")}, label: {Text("Delete")})
+                                        },
+                message: {Text("Do you want to delete from course?")
+                }
+            )
             
         }
     }
