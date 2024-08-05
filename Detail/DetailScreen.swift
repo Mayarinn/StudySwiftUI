@@ -9,6 +9,8 @@ import SwiftUI
 
 struct DetailScreen: View {
     
+    @State private var isShowingConfirmation = false
+    
     var object: ProductsResponse
     
     var body: some View {
@@ -21,72 +23,80 @@ struct DetailScreen: View {
             description(object: object)
                 .padding()
             Spacer()
+            Button {
+                isShowingConfirmation = true
+            } label: {
+                Label("Delete from \(object.category.rawValue)", systemImage: "trash.fill")
+            }
+            .buttonStyle(.bordered)
+            .tint(.red)
+            .controlSize(.regular)
             
         }
     }
     
-struct mainImage: View {
+    struct mainImage: View {
         
-    var object: ProductsResponse
-    
-    var body: some View {
-        if (object.category.rawValue == Category.courses.rawValue) {
-            Image(object.image)
-                .resizable()
-                .frame(width: 170, height: 170)
-                .border(Color.gray, width: 3)
-                .cornerRadius(30)
-                .shadow(radius: 10)
-        } else {
-            Image(object.image)
-                .resizable()
-                .frame(width: 170, height: 190)
-                .border(Color.gray, width: 3)
-                .cornerRadius(30)
-                .shadow(radius: 10)
-        }
-    }
-}
-    
-struct lessonsAndStudents: View {
+        var object: ProductsResponse
         
-    var object: ProductsResponse
-        
-    var body: some View {
-        HStack(spacing: 50.0) {
-            VStack {
-                Text("\(object.lessons)")
-                    .font(.title)
-                Text("Lessons")
-                    .font(.body)
-                    .fontWeight(.medium)
-                
-            }
-            VStack {
-                Text("\(object.students)")
-                    .font(.title)
-                Text("Students")
-                    .font(.body)
-                    .fontWeight(.medium)
+        var body: some View {
+            if (object.category.rawValue == Category.courses.rawValue) {
+                Image(object.image)
+                    .resizable()
+                    .frame(width: 170, height: 170)
+                    .border(Color.gray, width: 3)
+                    .cornerRadius(30)
+                    .shadow(radius: 10)
+            } else {
+                Image(object.image)
+                    .resizable()
+                    .frame(width: 170, height: 190)
+                    .border(Color.gray, width: 3)
+                    .cornerRadius(30)
+                    .shadow(radius: 10)
             }
         }
     }
-            
-}
     
-struct description: View {
+    struct lessonsAndStudents: View {
+        
+        var object: ProductsResponse
+        
+        var body: some View {
+            HStack(spacing: 50.0) {
+                VStack {
+                    Text("\(object.lessons)")
+                        .font(.title)
+                    Text("Lessons")
+                        .font(.body)
+                        .fontWeight(.medium)
+                    
+                }
+                VStack {
+                    Text("\(object.students)")
+                        .font(.title)
+                    Text("Students")
+                        .font(.body)
+                        .fontWeight(.medium)
+                }
+            }
+        }
+        
+    }
     
-    var object: ProductsResponse
-
-    var body: some View {
-        VStack(alignment: .leading, spacing: 10.0) {
-            Text("Description")
-                .font(.title)
-            Text(object.description)
-                .lineLimit(nil)
+    struct description: View {
+        
+        var object: ProductsResponse
+        
+        var body: some View {
+            VStack(alignment: .leading, spacing: 10.0) {
+                Text("Description")
+                    .font(.title)
+                Text(object.description)
+                    .lineLimit(nil)
+            }
         }
     }
-}
     
 }
 
