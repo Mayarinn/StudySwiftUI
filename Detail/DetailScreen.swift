@@ -38,6 +38,7 @@ struct DetailScreen: View {
                                 titleVisibility: .visible,
                                 actions: {
                 Button(role: .destructive, action: {print("Item deleted")}, label: {Text("Delete")})
+                Button(role: .destructive, action: {print("Other Item deleted")}, label: {Text("Other Item Delete")})
                                         },
                 message: {Text("Do you want to delete from course?")
                 }
