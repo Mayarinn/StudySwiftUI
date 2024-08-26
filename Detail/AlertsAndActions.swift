@@ -67,20 +67,6 @@ struct AlertsAndActions: View {
             )
         }
         
-        
-//        .alert(isPresented: $isShowingValueAlert) {
-//            Alert(title: Text("Important message"), message: Text("Wear sunscreen"), dismissButton: .default(Text("Got it!")))
-//        }
-        
-        
-//        .alert("Add student name", isPresented: $isShowingValueAlert, actions: {
-//            TextField("Value", text: $valueString)
-//            Button(action: { print("Item deleted") }, label: { Text("Submit") } )
-//            Button(role: .cancel, action: { }, label: { Text("Cancel") } )
-//        }, message: {
-//            Text("Enter student's name")
-//        })
-        
     }
 }
 
