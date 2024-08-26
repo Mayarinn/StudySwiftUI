@@ -51,9 +51,26 @@ struct AlertsAndActions: View {
 //        }, message: {
 //            Text("Enter students name")
 //        })
+        
         .alert(isPresented: $isShowingValueAlert) {
-            Alert(title: Text("Important message"), message: Text("Wear sunscreen"), dismissButton: .default(Text("Got it!")))
+            Alert (
+                title: Text("Alert"),
+                message: Text("This is an alert"),
+                primaryButton: .default(
+                    Text("OK"),
+                    action: { } //Hide alert
+                ),
+                secondaryButton: .destructive(
+                    Text("NOT OK"),
+                    action: { }//Keep alert
+                )
+            )
         }
+        
+        
+//        .alert(isPresented: $isShowingValueAlert) {
+//            Alert(title: Text("Important message"), message: Text("Wear sunscreen"), dismissButton: .default(Text("Got it!")))
+//        }
         
         
 //        .alert("Add student name", isPresented: $isShowingValueAlert, actions: {
