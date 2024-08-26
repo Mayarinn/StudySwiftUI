@@ -54,15 +54,15 @@ struct AlertsAndActions: View {
         
         .alert(isPresented: $isShowingValueAlert) {
             Alert (
-                title: Text("Alert"),
-                message: Text("This is an alert"),
+                title: Text("Return to Homepage"),
+                message: Text("Do you want to return to Homepage?"),
                 primaryButton: .default(
-                    Text("OK"),
-                    action: { } //Hide alert
+                    Text("No, stay here"),
+                    action: { } //Do nothing
                 ),
                 secondaryButton: .destructive(
-                    Text("NOT OK"),
-                    action: { }//Keep alert
+                    Text("Yes, return to Homepage"),
+                    action: { }//Move to ContentView()
                 )
             )
         }
